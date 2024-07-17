@@ -1,0 +1,81 @@
+/* Establece el color de fondo de la barra de navegación a blanco */
+.navbar-custom {
+    background-color: #ffffff;
+}
+
+/* Ajusta la altura de la imagen de la marca en la barra de navegación a 40px */
+.navbar-brand img {
+    height: 40px;
+}
+
+/* Define el color y el margen derecho de los enlaces de navegación */
+.navbar-nav .nav-link {
+    color: #1c1c72;
+    margin-right: 15px;
+}
+
+/* Cambia el color de los enlaces de navegación al pasar el cursor sobre ellos a negro */
+.navbar-nav .nav-link:hover {
+    color: #000;
+}
+
+/* Establece el estilo de los botones personalizados con borde y color específicos */
+.btn-custom {
+    border: 1px solid #1c1c72;
+    color: #1c1c72;
+    margin-right: 10px;
+}
+
+/* Cambia el color de fondo y el color del texto de los botones personalizados al pasar el cursor sobre ellos */
+.btn-custom:hover {
+    background-color: #1c1c72;
+    color: #fff;
+}
+
+/* Define el color de fondo y el color del texto de los botones de registro */
+.btn-register {
+    background-color: #1c1c72;
+    color: #fff;
+}
+
+/* Cambia el color de fondo de los botones de registro al pasar el cursor sobre ellos a negro */
+.btn-register:hover {
+    border: 1px solid #1c1c72;
+    background-color: #fff;
+    color: #1c1c72;
+}
+
+/* Alinea verticalmente el contenido de la marca */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Establece el color de fondo y el color del texto del pie de página */
+.footer {
+    background-color: #FFBD37;
+    color: #1c1c72;
+}
+
+/* Define el color y la decoración de los enlaces en el pie de página */
+.footer a {
+    color: #1c1c72;
+    text-decoration: none;
+}
+
+/* Establece el peso de la fuente y el color de los títulos en el pie de página */
+.footer h5 {
+    font-weight: bold;
+    color: #1c1c72;
+}
+
+/* Elimina el estilo de lista y el padding de las listas en el pie de página */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Establece el margen inferior de los elementos de lista en el pie de página */
+.footer li {
+    margin-bottom: 10px;
+}
