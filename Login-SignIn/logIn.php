@@ -9,8 +9,10 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
-
-<body style="background-color:#ececec;">
+<header>
+        <?php include '../header-template.php'; ?>
+    </header>
+<body>
     <!----LogIn inicia----->
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="row login-container">
@@ -57,6 +59,10 @@
         </div>
     </div>
     <!----LogIn termina----->
+
+    <footer>
+        <?php include '../footer-template.php'; ?>
+    </footer>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

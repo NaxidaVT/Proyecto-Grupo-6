@@ -96,7 +96,8 @@
     position: relative;
     /*Texto sobre la capa de opacidad */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    z-index: 2; /*Texto esté por encima */
+    z-index: 2;
+    /*Texto esté por encima */
 }
 
 /* Sombra al final del banner */
@@ -117,9 +118,25 @@
     padding-right: initial;
     background-image: none;
 }
+
 /* Sobrescribir los estilos del focus de Bootstrap */
 .form-control:focus,
 .form-select:focus {
     border-color: initial !important;
     box-shadow: none !important;
+}
+
+.card-custom {
+    position: relative;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.card-custom img {
+    border-radius: 10px;
+}
+
+.card-custom .card-body {
+    padding: 20px;
 }

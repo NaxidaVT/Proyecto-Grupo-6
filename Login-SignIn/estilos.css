@@ -96,3 +96,86 @@
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Header y footer*/
+/* Color de fondo de la barra de navegación*/
+.navbar-custom {
+    background-color: #ffffff;
+}
+
+/* Ajusta la altura del icon*/
+.navbar-brand img {
+    height: 40px;
+}
+
+/* Color y margen derecho de los enlaces*/
+.navbar-nav .nav-link {
+    color: #1c1c72;
+    margin-right: 15px;
+}
+
+/* Cambia el color de los enlaces con cursor sobre ellos a negro */
+.navbar-nav .nav-link:hover {
+    color: #000;
+}
+
+/* Botones personalizados con borde y color*/
+.btn-custom {
+    border: 1px solid #1c1c72;
+    color: #1c1c72;
+    margin-right: 10px;
+}
+
+/* Color de fondo y texto al pasar el cursor sobre ellos (boton personalizado)*/
+.btn-custom:hover {
+    background-color: #1c1c72;
+    color: #fff;
+}
+
+/* Color de fondo y el color del texto del boton de registro */
+.btn-register {
+    background-color: #1c1c72;
+    color: #fff;
+}
+
+/* Color de fondo del registro al pasar el cursor sobre ellos*/
+.btn-register:hover {
+    border: 1px solid #1c1c72;
+    background-color: #fff;
+    color: #1c1c72;
+}
+
+/* Alinea verticalmente el contenido de la marca */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Color de fondo y del texto del footer */
+.footer {
+    background-color: #FFBD37;
+    color: #1c1c72;
+}
+
+/* Color y la decoración de los enlaces*/
+.footer a {
+    color: #1c1c72;
+    text-decoration: none;
+}
+
+/* Peso de la fuente y color de los títulos*/
+.footer h5 {
+    font-weight: bold;
+    color: #1c1c72;
+}
+
+/* Elimina el estilo de lista y el padding */
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Margen inferior de los elementos de lista*/
+.footer li {
+    margin-bottom: 10px;
+}
