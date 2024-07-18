@@ -25,11 +25,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="/Proyecto-Grupo-6/index.php">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/Proyecto-Grupo-6/matricula.php">Matricula (temporal)</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="matricula.php">Matricula (temporal)</a></li>
+                        <li class="nav-item"><a class="nav-link" href="noticias.php">Noticias</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" header-template
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Soporte
                             </a>
