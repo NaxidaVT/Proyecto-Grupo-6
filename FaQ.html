@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .faq-section,
+        .contact-section {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-header,
+        .contact-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card-header button {
+            width: 100%;
+            text-align: left;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5 faq-section justify-content-center">
+        <h1 class="faq-header">Preguntas Frecuentes</h1>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            Tengo que ir de manera fisica a resgistrarme?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Si, la primera vez que te registras tienes que ir a tu sucurasl mas cercana
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            Que documento necesito?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        documentos documentosos -placeholder-
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            Tiene costo?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        No, es un derecho de todos
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 contact-section">
+        <h2 class="contact-header">Informacion de contacto</h2>
+        <div class="row text-center">
+            <div class="col-md-6 mb-4">
+                <h5>Call Center</h5>
+                <p>Phone: 5555-2222</p>
+                <p>Horario: Lunes - Viernes, 9 AM - 5 PM</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h5>Email Soporte</h5>
+                <p>Email: Soporte@example.com</p>
+                <p>Tiempo de Respuesta: 1 dia laboral</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-6 mb-4">
+                <h5>Oficinas Central</h5>
+                <p>Direccion: San Jose, Costa Rica</p>
+                <p>Phone: 506 2222-5555</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h5>Nuestras redes sociales</h5>
+                <p>Facebook: <a href="https://facebook.com/" target="_blank">facebook.com/</a></p>
+                <p>Twitter: <a href="https://twitter.com/" target="_blank">twitter.com/</a></p>
+                <p>Instagram: <a href="https://instagram.com/" target="_blank">instagram.com/</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
