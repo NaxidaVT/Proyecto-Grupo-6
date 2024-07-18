@@ -1,0 +1,166 @@
+/* Estilo base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(244, 244, 244);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+    background-color: rgb(18, 18, 18);
+    color: rgb(224, 224, 224);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.container.dark-theme {
+    background: rgb(30, 30, 30);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre elementos */
+}
+
+section {
+    width: 100%;
+    margin-bottom: 20px; /* Espacio en pantallas pequeñas */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: inherit; /* Para cambiar el color del tema */
+}
+
+input, select, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: rgb(0, 123, 255);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(0, 86, 179);
+}
+
+.dark-theme input, .dark-theme select {
+    background-color: rgb(51, 51, 51);
+    color: rgb(224, 224, 224);
+    border-color: rgb(85, 85, 85);
+}
+
+.dark-theme button {
+    background-color: rgb(0, 123, 255);
+    color: rgb(255, 255, 255);
+}
+
+.dark-theme button:hover {
+    background-color: rgb(0, 86, 179);
+}
+
+.dark-theme label {
+    color: rgb(224, 224, 224);
+}
+
+.dark-theme header, .dark-theme .container {
+    background: rgb(30, 30, 30);
+}
+
+.dark-theme h2 {
+    color: rgb(224, 224, 224);
+}
+
+/* Estilo específico para la página de gestión de hijos */
+.child-users {
+    margin-top: 20px;
+}
+
+.child-user {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.child-user .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.child-user .form-group label {
+    width: 200px; /* Ancho fijo para etiquetas */
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo */
+}
+
+.child-user .form-group input,
+.child-user .form-group select {
+    flex: 1; /* El campo de entrada ocupa el espacio restante */
+}
+
+.dark-theme .child-user {
+    background-color: rgb(51, 51, 51);
+    border-color: rgb(85, 85, 85);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.save-button {
+    background-color: rgb(0, 123, 0);
+}
+
+.save-button:hover {
+    background-color: rgb(0, 100, 0);
+}
+
+.remove-button {
+    background-color: rgb(255, 0, 0);
+}
+
+.remove-button:hover {
+    background-color: rgb(200, 0, 0);
+}
+.manage-students {
+    display: block; 
+    margin: auto;
+    text-align: center;
+}
