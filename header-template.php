@@ -1,9 +1,12 @@
+<!DOCTYPE html>
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Example</title>
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    <title>Sistema de Matrícula</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -11,30 +14,31 @@
     <header class="header" style="padding: 20px 0; font-size: 20px;">
         <nav class="navbar navbar-expand-lg navbar-custom">
             <div class="container">
-            <a href="#" class="navbar-brand">
-                        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSSkYth4kp2yJNZUVHGLwAzwSlNWu9pXEi6Tg_KUJMyvnfkQWZr" />
-                        Nombre
-                    </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                <a href="#" class="navbar-brand">
+                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSSkYth4kp2yJNZUVHGLwAzwSlNWu9pXEi6Tg_KUJMyvnfkQWZr"
+                        alt="Logo">
+                    Sistema de Matrícula
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li><a class="nav-link" href="#">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Escuelas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="matricula.php">Matricula (temporal)</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                                    aria-expanded="false">Soporte</a>
-                                <ul class="dropdown-menu dropdown-menu-white">
-                                    <li class="nav-item"><a class="nav-link" href="#">FaQ</a></li>
-                                    header-template <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Guias</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+header-template                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Soporte
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">FaQ</a></li>
+                                <li><a class="dropdown-item" href="contacto.php">Contacto</a></li>
+                                <li><a class="dropdown-item" href="#">Guias</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="btn btn-custom" href="#">Iniciar sesión</a></li>
                         <li class="nav-item"><a class="btn btn-register" href="#">Registrarse</a></li>
                     </ul>
@@ -42,5 +46,6 @@
             </div>
         </nav>
     </header>
-
 </body>
+
+</html>
