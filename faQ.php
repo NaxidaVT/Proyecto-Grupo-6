@@ -76,7 +76,7 @@
                                         <p class="card-text">Una vez completada la prematrícula y proporcionada la
                                             información correspondiente, podrás realizar el registro con éxito. En caso
                                             de algún problema, ponerse en contacto con nuestro equipo de soporte o
-                                            consultar la sección de guías para obtener ayuda.</p>
+                                            consultar la sección de guías y tutoriales para obtener ayuda.</p>
                                     </div>
                                 </div>
                             </div>

@@ -126,6 +126,7 @@
     box-shadow: none !important;
 }
 
+/* Cards personalizadas */
 .card-custom {
     position: relative;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
@@ -133,10 +134,42 @@
     margin: 20px auto;
 }
 
+/* Imágenes Cards*/
 .card-custom img {
     border-radius: 10px;
 }
 
+/* Cuerpo Cards*/
 .card-custom .card-body {
     padding: 20px;
+}
+
+/* Cards guía */
+.card-custom-guia {
+    position: relative;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Imágenes Cards guía */
+.card-custom-guia img {
+    border-radius: 10px 10px 0 0;
+    height: 150px;
+    object-fit: cover; 
+    width: 100%; 
+}
+
+/* Cuerpo Cards guía */
+.card-custom-guia .card-body {
+    padding: 20px;
+}
+
+/* Iframes Cards guía */
+.card-custom-guia iframe {
+    border-radius: 10px 10px 0 0;
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
 }

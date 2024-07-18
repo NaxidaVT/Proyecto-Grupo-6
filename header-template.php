@@ -36,7 +36,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="/Proyecto-Grupo-6/faQ.php">FaQ</a></li>
                                 <li><a class="dropdown-item" href="/Proyecto-Grupo-6/contacto.php">Contacto</a></li>
-                                <li><a class="dropdown-item" href="#">Guias</a></li>
+                                <li><a class="dropdown-item" href="/Proyecto-Grupo-6/guias-Tutoriales.php">Guias y tutoriales</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="btn btn-custom" href="/Proyecto-Grupo-6/login-Signin/login.php">Iniciar sesión</a></li>
