@@ -1,0 +1,98 @@
+/*------------ CSS de Gabriel ------------*/
+
+/*------------ CSS de Pagina Principal/Inicio ------------*/
+
+.navbar-custom {
+    background-color: #f8f9fa;
+}
+
+.hero-section {
+    background: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.news-section .card {
+    border: none;
+}
+
+.calendar-section {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+}
+
+.important-documents-section {
+    padding: 50px 0;
+}
+
+.footer-custom {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+}
+
+/*------------ CSS de LogIn ------------*/
+.login-container {
+    max-width: 900px; /* Ajusta este valor según sea necesario */
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.left-box {
+    background: #000000;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+}
+.right-box {
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+}
+.featured-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/*------------ Pantallas pequeñas------------*/
+@media only screen and (max-width: 768px){
+     .box-area{
+        margin: 0 10px;
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+}
+/*------------ CSS de Recuperar contraseña ------------*/
+.recover-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recover-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*------------ CSS de Registro ------------*/
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
