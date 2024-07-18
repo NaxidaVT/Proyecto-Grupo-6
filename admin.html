@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Administración de datos</h1>
+        
+        <!-- Selector de Tema -->
+        <div class="theme-selector">
+            <label for="theme">Seleccionar Tema: </label>
+            <select id="theme" onchange="changeTheme()">
+                <option value="dark">Oscuro</option>
+                <option value="light">Claro</option>  
+            </select>
+        </div>
+
+        <!-- Nombre del Administrador -->
+        <div id="admin-name">
+            <h3>Administrador: David Ramírez Villalobos</h3>
+        </div>
+
+        <!-- Gestión de Usuario -->
+        <section id="gestion-usuario">
+            <h2>Gestión de Usuario</h2>
+            <div class="search-box">
+                <input type="text" id="search-carnet-cedula" placeholder="Buscar por carnet o cédula">
+                <button onclick="buscarUsuario()">Buscar</button>
+            </div>
+            <div id="user-list"></div>
+        </section>
+
+        <!-- Gestión de Matrícula -->
+        <section id="gestion-matricula">
+            <h2>Gestión de Matrícula</h2>
+            <div class="search-box">
+                <input type="text" id="search-matricula" placeholder="Buscar por ID de matrícula o cédula/carnet">
+                <button onclick="buscarMatricula()">Buscar</button>
+            </div>
+            <div id="matricula-list"></div>
+            <div id="nota-historial" style="margin-top: 20px;"></div>
+        </section>
+
+        <!-- Permisos y Seguimientos de Estudiantes -->
+        <section id="permisos-seguimientos">
+            <h2>Permisos y Seguimientos de Estudiantes</h2>
+            <div class="search-box">
+                <input type="text" id="search-seguimientos" placeholder="Buscar por carnet o cédula">
+                <button onclick="buscarSeguimientos()">Buscar</button>
+            </div>
+            <div id="seguimientos-list"></div>
+        </section>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
