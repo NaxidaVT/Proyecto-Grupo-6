@@ -33,12 +33,12 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espacio entre elementos */
+    gap: 20px; 
 }
 
 section {
     width: 100%;
-    margin-bottom: 20px; /* Espacio en pantallas pequeñas */
+    margin-bottom: 20px; 
 }
 
 form {
@@ -124,13 +124,13 @@ button:hover {
 }
 
 .child-user .form-group label {
-    width: 200px; /* Ancho fijo para etiquetas */
-    margin-right: 10px; /* Espacio entre la etiqueta y el campo */
+    width: 200px; 
+    margin-right: 10px; 
 }
 
 .child-user .form-group input,
 .child-user .form-group select {
-    flex: 1; /* El campo de entrada ocupa el espacio restante */
+    flex: 1;
 }
 
 .dark-theme .child-user {
@@ -141,7 +141,7 @@ button:hover {
 .buttons-container {
     display: flex;
     justify-content: flex-start;
-    gap: 10px; /* Espacio entre los botones */
+    gap: 10px;
 }
 
 .save-button {

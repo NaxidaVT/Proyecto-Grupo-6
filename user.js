@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const themeSelect = document.getElementById('theme');
     
-    // Cargar el tema desde el almacenamiento local
+    // Para cargar el tema desde el almacenamiento local
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         body.classList.toggle('dark-theme', savedTheme === 'dark');
@@ -205,7 +205,7 @@ function addChildUser() {
     saveButton.textContent = 'Guardar';
     saveButton.className = 'save-button';
     saveButton.onclick = function () {
-        // Aquí podrías agregar la lógica para guardar la información en el backend
+        
         alert('Información guardada');
     };
 
