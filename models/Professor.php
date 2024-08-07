@@ -1,7 +1,7 @@
 <?php
-class Student {
+class Professor {
     private $conn;
-    private $table = 'estudiantes';
+    private $table = 'profesores'; // Asegúrate de que el nombre de la tabla es correcto
 
     public function __construct($db) {
         $this->conn = $db;
@@ -10,8 +10,15 @@ class Student {
     public function add($nombre, $email) {
         $sql = "INSERT INTO $this->table (nombre, email) VALUES (?, ?)";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("ss", $nombre, $email);
-        return $stmt->execute();
+        if ($stmt === false) {
+            die('Error en prepare: ' . $this->conn->error);
+        }
+        $stmt->bind_param('ss', $nombre, $email);
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public function getAll() {

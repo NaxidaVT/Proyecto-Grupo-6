@@ -1,57 +1,30 @@
 <?php
-require_once '../config/config.php';
-
 class Subject {
-    public $id;
-    public $name;
-    public $created_at;
+    private $conn;
+    private $table = 'asignaturas'; // Asegúrate de que el nombre de la tabla es correcto
 
-    public function __construct($name, $id = null) {
-        $this->name = $name;
-        $this->id = $id;
-        $this->created_at = date('Y-m-d H:i:s'); // Asignamos la fecha actual
+    public function __construct($db) {
+        $this->conn = $db;
     }
 
-    public function save() {
-        $connection = connect();
-        $statement = $connection->prepare("INSERT INTO subjects (name, created_at) VALUES (?, ?)");
-        $statement->bind_param('ss', $this->name, $this->created_at); // Solo necesitamos 'ss' para dos cadenas
-        $statement->execute();
-        $statement->close();
-        $connection->close();
-    }
-
-    public static function all() {
-        $connection = connect();
-        $result = $connection->query("SELECT * FROM subjects");
-        $subjects = [];
-        while ($row = $result->fetch_assoc()) {
-            $subjects[] = new Subject($row['name'], $row['id']);
+    public function add($nombre, $descripcion) {
+        $sql = "INSERT INTO $this->table (nombre, descripcion) VALUES (?, ?)";
+        $stmt = $this->conn->prepare($sql);
+        if ($stmt === false) {
+            die('Error en prepare: ' . $this->conn->error);
         }
-        $connection->close();
-        return $subjects;
+        $stmt->bind_param('ss', $nombre, $descripcion);
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public static function find($id) {
-        $connection = connect();
-        $statement = $connection->prepare("SELECT * FROM subjects WHERE id = ?");
-        $statement->bind_param('i', $id);
-        $statement->execute();
-        $result = $statement->get_result();
-        $row = $result->fetch_assoc();
-        $subject = new Subject($row['name'], $row['id']);
-        $statement->close();
-        $connection->close();
-        return $subject;
-    }
-
-    public function update() {
-        $connection = connect();
-        $statement = $connection->prepare("UPDATE subjects SET name = ? WHERE id = ?");
-        $statement->bind_param('si', $this->name, $this->id);
-        $statement->execute();
-        $statement->close();
-        $connection->close();
+    public function getAll() {
+        $sql = "SELECT * FROM $this->table";
+        $result = $this->conn->query($sql);
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 }
 ?>

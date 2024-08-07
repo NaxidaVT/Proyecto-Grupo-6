@@ -1,13 +1,13 @@
 <?php
 include_once 'conn/config.php';
-include_once 'models/Student.php';
+include_once 'models/Professor.php';
 
-class StudentController {
+class ProfessorController {
     private $model;
 
     public function __construct() {
         global $conn;
-        $this->model = new Student($conn);
+        $this->model = new Professor($conn);
     }
 
     public function add() {
@@ -15,18 +15,18 @@ class StudentController {
             $nombre = $_POST['nombre'];
             $email = $_POST['email'];
             if ($this->model->add($nombre, $email)) {
-                header('Location: dashboard.php');
+                header('Location: index.php?action=list_professors');
             } else {
-                echo "Error al añadir estudiante.";
+                echo "Error al añadir profesor.";
             }
         } else {
-            include 'views/student/add_student.php';
+            include 'views/professor/add_professor.php';
         }
     }
 
     public function list() {
-        $estudiantes = $this->model->getAll();
-        include 'views/student/list.php';
+        $professors = $this->model->getAll();
+        include 'views/professor/list_professors.php';
     }
 }
 ?>

@@ -1,39 +1,32 @@
 <?php
-require_once '../models/Subject.php';
+include_once 'conn/config.php';
+include_once 'models/Subject.php';
 
 class SubjectController {
-    public function index() {
-        $subjects = Subject::all();
-        require_once '../views/subjects/index.php';
+    private $model;
+
+    public function __construct() {
+        global $conn;
+        $this->model = new Subject($conn);
     }
 
-    public function create() {
-        require_once '../views/subjects/create.php';
+    public function add() {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $nombre = $_POST['nombre'];
+            $descripcion = $_POST['descripcion'];
+            if ($this->model->add($nombre, $descripcion)) {
+                header('Location: index.php?action=list_subjects');
+            } else {
+                echo "Error al añadir asignatura.";
+            }
+        } else {
+            include 'views/subject/add_subject.php';
+        }
     }
 
-    public function store() {
-        $subject = new Subject($_POST['name'], $_POST['code']);
-        $subject->save();
-        header('Location: /proyecto_matricula/public/subject');
-    }
-
-    public function edit() {
-        $id = $_GET['id'];
-        $subject = Subject::find($id);
-        require_once '../views/subjects/edit.php';
-    }
-
-    public function update() {
-        $id = $_POST['id'];
-        $name = $_POST['name'];
-        $code = $_POST['code'];
-
-        $subject = Subject::find($id);
-        $subject->name = $name;
-        $subject->code = $code;
-        $subject->update();
-
-        header('Location: /proyecto_matricula/public/subject');
+    public function list() {
+        $asignaturas = $this->model->getAll();
+        include 'views/subject/list_subjects.php';
     }
 }
 ?>
