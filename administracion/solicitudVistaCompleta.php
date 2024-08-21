@@ -1,65 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle Matricula Admin</title>
+    <title>Sistema de Matrícula en Línea</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        .container {
-            margin-top: 30px;
-        }
-        .card {
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        .card-header {
-            background-color: #fff;
-            border-bottom: none;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .card-body {
-            padding: 20px;
-        }
-        .profile-info {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .profile-info h5 {
-            font-weight: bold;
-        }
-        .profile-info .info {
-            margin-bottom: 10px;
-        }
-        .btn-accept {
-            background-color: #28a745;
-            color: #fff;
-        }
-        .btn-accept:hover {
-            background-color: #218838;
-        }
-        .btn-reject {
-            background-color: #dc3545;
-            color: #fff;
-        }
-        .btn-reject:hover {
-            background-color: #c82333;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./styleAdmin.css">
 </head>
+
 <body>
+    <header>
+        <?php include 'headerAdmin.php'; ?>
+    </header>
     <div class="container">
         <div class="profile-info card">
-            <div class="card-header">Solicitud de matrícula en línea</div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span>Solicitud de matrícula en línea</span>
+                <div>
+                <a href="listaDeMatriculas.php" class="btn btn-close btn-sm">Regresar</a>
+                </div>
+            </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-3 info">
@@ -123,8 +85,14 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <?php include 'footerAdmin.php'; ?>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

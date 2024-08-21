@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +11,17 @@
             background-color: #f5f5f5;
             color: #333;
         }
+
         .container {
             margin-top: 30px;
         }
+
         .card {
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
+
         .card-header {
             background-color: #fff;
             border-bottom: none;
@@ -25,39 +29,54 @@
             font-size: 24px;
             font-weight: bold;
         }
+
         .card-body {
             padding: 20px;
         }
-        .profile-info, .assessment-summary {
+
+        .profile-info,
+        .assessment-summary {
             background-color: #fff;
             border-radius: 10px;
             padding: 20px;
             margin-bottom: 20px;
         }
-        .profile-info h5, .assessment-summary h5 {
+
+        .profile-info h5,
+        .assessment-summary h5 {
             font-weight: bold;
         }
-        .profile-info .info, .assessment-summary .info {
+
+        .profile-info .info,
+        .assessment-summary .info {
             margin-bottom: 10px;
         }
+
         .form-control {
             background-color: #f5f5f5;
             border: none;
         }
+
         .btn-save {
             background-color: #6b6bf1;
             color: #fff;
         }
+
         .btn-save:hover {
             background-color: #5a5af1;
         }
+
         .table {
             background-color: #fff;
             border-radius: 10px;
         }
     </style>
 </head>
+
 <body>
+    <header>
+        <?php include 'headerUser.php'; ?>
+    </header>
     <div class="container">
         <div class="profile-info card">
             <div class="card-header">Solicitud de matrícula en línea</div>
@@ -121,8 +140,14 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <?php include 'footerUser.php'; ?>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

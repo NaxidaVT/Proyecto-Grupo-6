@@ -2,17 +2,17 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Matrícula</title>
+    <title>Sistema de Matrícula en Línea</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./styleUser.css">
 </head>
 
 <body>
     <header>
-        <?php include 'header-template.php'; ?>
+        <?php include 'headerUser.php'; ?>
     </header>
     <section id="banner-m"
         style="background-image: url('https://estaticos-cdn.prensaiberica.es/clip/27162208-425c-4c71-b6df-5e016ede2ea7_21-9-aspect-ratio_default_0.jpg'); background-size: cover; background-position: center; position: relative;margin-bottom: 50px;">
@@ -122,9 +122,14 @@
             </div>
         </section>
     </main>
+
     <footer>
-        <?php include 'footer-template.php'; ?>
+        <?php include 'footerUser.php'; ?>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

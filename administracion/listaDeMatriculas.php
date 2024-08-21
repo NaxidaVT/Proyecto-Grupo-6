@@ -4,67 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Matrículas</title>
+    <title>Sistema de Matrícula en Línea</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #e9ecef;
-        }
-
-        .sidebar {
-            background-color: #343a40;
-            color: #fff;
-            height: 100vh;
-            padding-top: 20px;
-        }
-
-        .sidebar a {
-            color: #fff;
-            display: block;
-            padding: 10px 20px;
-            text-decoration: none;
-        }
-
-        .sidebar a:hover {
-            background-color: #495057;
-        }
-
-        .content {
-            padding: 20px;
-        }
-
-        .status-pending {
-            color: #ffc107;
-            font-weight: bold;
-        }
-
-        .status-fulfilled {
-            color: #28a745;
-            font-weight: bold;
-        }
-
-        .status-unfulfilled {
-            color: #dc3545;
-            font-weight: bold;
-        }
-
-        .details-row {
-            display: none;
-        }
-
-        .btn-view {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        .btn-view:hover {
-            background-color: #0056b3;
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./styleAdmin.css">
 </head>
 
 <body>
+    <header>
+        <?php include 'headerAdmin.php'; ?>
+    </header>
     <div class="d-flex">
         <div class="sidebar col-md-2">
             <a href="#" class="d-block text-center mb-4">Ministerio de Educacion</a>
@@ -75,11 +24,14 @@
             <div class="d-flex justify-content-between mb-3">
                 <div>
                     <h2>Ver Matrículas</h2>
-                    <button class="btn btn-secondary">Denegar Matrículas</button>
+                    <button class="btn btn-danger">Denegar Matrículas</button>
                     <button class="btn btn-success">Aceptar Matrícula</button>
                 </div>
-                <input type="text" class="form-control w-25"
-                    placeholder="Buscar Matrícula por: Id de matrícula, Cédula, Nombre, etc">
+                <div class="search-bar-container">
+                    <input class="form-control search-bar" id="busquedadCedula" type="text"
+                        placeholder="Buscar por cédula">
+                    <button class="btn btn-search">Buscar</button>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -89,7 +41,7 @@
                                 <input type="checkbox">
                                 Matrícula ID: <a href="#" onclick="toggleDetails('details1')">#6709</a>
                             </div>
-                            <button class="btn btn-info btn-sm" href="#SolicitudVistaCompleta.html">Ver detalles de solicitud</button>
+                            <a href="solicitudVistaCompleta.php" class="btn btn-view btn-sm">Ver detalles de solicitud</a>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -148,7 +100,7 @@
                                 <input type="checkbox">
                                 Matrícula ID: <a href="#" onclick="toggleDetails('details1')">#6709</a>
                             </div>
-                            <button class="btn btn-info btn-sm">Ver detalles de solicitud</button>
+                            <a href="solicitudVistaCompleta.php" class="btn btn-view btn-sm">Ver detalles de solicitud</a>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -207,7 +159,7 @@
                                 <input type="checkbox">
                                 Matrícula ID: <a href="#" onclick="toggleDetails('details1')">#6709</a>
                             </div>
-                            <button class="btn btn-info btn-sm">Ver detalles de solicitud</button>
+                            <a href="solicitudVistaCompleta.php" class="btn btn-view btn-sm">Ver detalles de solicitud</a>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -259,6 +211,10 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <?php include 'footerAdmin.php'; ?>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

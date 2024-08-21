@@ -46,12 +46,16 @@
 </head>
 
 <body>
+
+    <header>
+        <?php include 'headerUser.php'; ?>
+    </header>
+
     <div class="d-flex">
         <div class="sidebar col-md-3">
             <button class="btn btn-link mb-3">Volver</button>
             <div class="text-center mb-4">
-                <img src="DALL·E 2024-08-08 02.39.27 - An illustration in a colorful, playful, and modern flat design style featuring a girl. The image should include a circular frame with the girl's face .webp"
-                    class="rounded-circle mb-2" alt="User" id="userpic">
+                <img src="fotoperfil.webp" class="rounded-circle mb-2" alt="User" id="userpic">
                 <h4>Nombre de Usuario aquí</h4>
                 <p>Tipo de Usuario aquí</p>
             </div>
@@ -110,7 +114,8 @@
                                             <td>Febrero 24, 2024</td>
                                             <td>Febrero 25, 2024</td>
                                             <td>
-                                                <button type="button" class="btn btn-info">Ver detalles de solicitud</button>
+                                                <button type="button" class="btn btn-info">Ver detalles de
+                                                    solicitud</button>
                                                 <button type="button" class="btn btn-danger">Cancelar Solicitud</button>
 
                                             </td>
@@ -165,6 +170,11 @@
         </div>
     </div>
     </div>
+
+    <footer>
+        <?php include 'footerUser.php'; ?>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

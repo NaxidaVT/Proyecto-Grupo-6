@@ -4,102 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bandeja de Correo</title>
+    <title>Sistema de Matrícula en Línea</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        .sidebar {
-            height: 100vh;
-            background-color: #343a40;
-            color: #fff;
-            padding-top: 20px;
-            border-right: 1px solid #e3e6f0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .sidebar .content {
-            padding-bottom: 20px;
-        }
-
-        .sidebar img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-        }
-
-        .sidebar a {
-            color: #ffffff;
-            display: block;
-            padding: 10px 20px;
-            text-decoration: none;
-        }
-
-        .sidebar a:hover {
-            background-color: #e3e6f0;
-        }
-
-        .main-content {
-            padding: 20px;
-        }
-
-        .email-list {
-            background-color: #fff;
-            border-right: 1px solid #e3e6f0;
-            height: 100vh;
-            overflow-y: auto;
-        }
-
-        .email-item {
-            padding: 15px;
-            border-bottom: 1px solid #e3e6f0;
-            cursor: pointer;
-        }
-
-        .email-item:hover {
-            background-color: #f5f5f5;
-        }
-
-        .email-detail {
-            padding: 20px;
-        }
-
-        .attachment {
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        .attachment img {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            margin-right: 10px;
-            border-radius: 5px;
-        }
-
-        .delete-btn {
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./styleAdmin.css">
 </head>
 
 <body>
+    <header>
+        <?php include 'headerAdmin.php'; ?>
+    </header>
     <div class="d-flex">
         <div class="sidebar col-md-2">
             <a href="#" class="text-center mb-4 d-block">Correo</a>
-            <a href="#" class="rounded">Bandeja de entrada <span class="badge badge-secondary float-right rounded">7</span></a>
-            <div class="text-center mb-4">
-                <img src="DALL·E 2024-08-08 02.39.27 - An illustration in a colorful, playful, and modern flat design style featuring a girl. The image should include a circular frame with the girl's face .webp"
-                    class="rounded-circle mb-2" alt="User" id="userpic">
-                <h4>Nombre de Usuario aquí</h4>
-                <p>Tipo de Usuario aquí</p>
-            </div>
+            <a href="#" class="rounded">Bandeja de entrada <span
+                    class="badge badge-secondary float-right rounded">7</span></a>
         </div>
         <div class="email-list col-md-4">
             <div class="email-item" onclick="showEmail('email1')">
@@ -197,6 +116,11 @@
             `;
         }
     </script>
+
+    <footer>
+        <?php include 'footerAdmin.php'; ?>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
