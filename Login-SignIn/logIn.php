@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <header>
-        <?php include '../header-template.php'; ?>
+        <?php include 'headerLog.php'; ?>
     </header>
 <body>
     <!----LogIn inicia----->
@@ -22,8 +22,9 @@
                     <img src="https://images.unsplash.com/photo-1535905496755-26ae35d0ae54?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         class="img-fluid">
                 </div>
-                <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">
-                    Inicia sesion para continuar</p>
+                <p class="text-white fs-5" style="font-family: 'Courier New', Courier, monospace; font-weight: 500;">
+    Inicia sesión para continuar
+</p>
                 <small class="text-white text-wrap text-center"
                     style="width: 17rem;font-family: 'Courier New', Courier, monospace;">En el nuevo sistema virtual tu experiencia mejora!</small>
             </div>
@@ -44,13 +45,13 @@
                                 <input type="password" class="form-control" id="password"
                                     placeholder="Introduce tu contraseña">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+                            <button style="display: block; margin: 0 auto; width: calc(100% - 30px);" type="submit" class="btn btn-register">Ingresar</button>
                         </form>
                         <div class="mt-3 text-center">
-                            <a href="RecuperarContrasena.html">¿Olvidaste tu contraseña?</a>
+                            <a style="color: #000;" href="recuperarContrasena.php">¿Olvidaste tu contraseña?</a>
                         </div>
                         <div class="mt-3 text-center">
-                            <a href="CrearUsuario.html">Crear una cuenta nueva</a>
+                            <a style="color: #000;" href="crearUsuario.php">Crear una cuenta nueva</a>
                         </div>
                     </div>
                 </div>

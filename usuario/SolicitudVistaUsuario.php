@@ -79,7 +79,12 @@
     </header>
     <div class="container">
         <div class="profile-info card">
-            <div class="card-header">Solicitud de matrícula en línea</div>
+        <div class="card-header d-flex justify-content-between align-items-center">
+                <span>Solicitud de matrícula en línea</span>
+                <div>
+                <a href="perfil.php" class="btn btn-close btn-sm">Regresar</a>
+                </div>
+            </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-3 info">

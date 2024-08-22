@@ -4,47 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./styleUser.css">
 
-        .sidebar img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-        }
-
-        .sidebar {
-            background-color: #fff;
-            padding: 20px;
-            height: 100vh;
-            border-right: 1px solid #e3e6f0;
-        }
-
-        .main-content {
-            padding: 20px;
-        }
-
-        .nav-tabs .nav-link {
-            color: #333;
-        }
-
-        .nav-tabs .nav-link.active {
-            color: #007bff;
-        }
-
-        .card {
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
 </head>
-
 <body>
 
     <header>
@@ -53,7 +19,6 @@
 
     <div class="d-flex">
         <div class="sidebar col-md-3">
-            <button class="btn btn-link mb-3">Volver</button>
             <div class="text-center mb-4">
                 <img src="fotoperfil.webp" class="rounded-circle mb-2" alt="User" id="userpic">
                 <h4>Nombre de Usuario aquí</h4>
@@ -87,13 +52,13 @@
             </nav>
             <div class="tab-content mt-4">
                 <div class="tab-pane fade show active" id="Vista_General">
-                    <div class="card">
+                    <!--<div class="card">
                         <div class="card-body">
                             <h5>Notificaciones sin leer</h5>
                             <p>Número de notificaciones sin leer</p>
                             <button class="btn btn-success">Ver últimas notificaciones</button>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="card mt-4">
                         <div class="card-body">
                             <div class="table-responsive">
@@ -114,13 +79,11 @@
                                             <td>Febrero 24, 2024</td>
                                             <td>Febrero 25, 2024</td>
                                             <td>
-                                                <button type="button" class="btn btn-info">Ver detalles de
-                                                    solicitud</button>
+                                                <a href="solicitudVistaUsuario.php" class="btn btn-view">Ver detalles de solicitud</a>
                                                 <button type="button" class="btn btn-danger">Cancelar Solicitud</button>
 
                                             </td>
                                         </tr>
-                                        <!-- Agrega más filas aquí según sea necesario -->
                                     </tbody>
                                 </table>
                             </div>
@@ -162,7 +125,10 @@
                             <input type="text" class="form-control" id="title"
                                 placeholder="Ingresa tu número de teléfono personal">
                         </div>
-                        <button type="submit" class="btn btn-outline-primary btn-block">Actualizar</button>
+                        <div style="text-align: center; margin-top: 20px;">
+                            <button type="submit" class="btn btn-update">Actualizar</button>
+                        </div>
+
                     </form>
                     <a href="#" class="btn btn-danger mt-3">Solicitud de cierre de cuenta</a>
                 </div>

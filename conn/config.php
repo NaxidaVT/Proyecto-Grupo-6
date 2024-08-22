@@ -1,15 +1,15 @@
 <?php
 
-$host = 'localhost';
-$db = 'sistema_matricula';
-$user = 'root';  // usuario MySQL
-$pass = '';  // contraseña MySQL
+$servername = "localhost";
+$username = "root";
+$password = "pass";
+$database = "sistema_matricula";
 
+$conn = new mysqli($servername,$username, $password, $database);
 
-$conn = new mysqli($host, $user, $pass, $db);
-
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+if($conn->connect_error){
+    die("Conexion fallida: ".$conn->connect_error);
+    
 }
-?>
 
+echo "Conexion exitosa";
