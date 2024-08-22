@@ -14,50 +14,51 @@
     <header>
         <?php include 'headerAdmin.php'; ?>
     </header>
+
     <div class="container">
-        <div class="card">
-            <div class="card-header">
-                Listado de Anuncios
+        <div class="profile-info card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span>Listado de Anuncios</span>
             </div>
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <button class="btn btn-add" data-toggle="modal" data-target="#announcementModal">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <span>Tabla de Anuncios</span>
+                    </div>
 
-            <div class="card">
-
-                <div class="card-header">
-                    <button class="btn btn-add" data-toggle="modal" data-target="#announcementModal">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <span>Tabla de Anuncios</span>
-
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" id="announcementsTable">
-                            <thead>
-                                <tr>
-                                    <th>Título</th>
-                                    <th>Fecha</th>
-                                    <th>Descripción</th>
-                                    <th>Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Nueva Fecha de Inscripción</td>
-                                    <td>2024-07-20</td>
-                                    <td>La nueva fecha de inscripción es el 20 de julio de 2024. Asegúrese de completar
-                                        su formulario antes de la fecha límite.</td>
-                                    <td>
-                                        <button class="btn btn-warning btn-edit mt-1 mb-1" data-toggle="modal"
-                                            data-target="#announcementModal" data-id="1">
-                                            <i class="fas fa-pencil-alt" style="color: white;"></i>
-                                        </button>
-                                        <button class="btn btn-danger mt-1 mb-1">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="announcementsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Fecha</th>
+                                        <th>Descripción</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Nueva Fecha de Inscripción</td>
+                                        <td>2024-07-20</td>
+                                        <td>La nueva fecha de inscripción es el 20 de julio de 2024. Asegúrese de
+                                            completar su formulario antes de la fecha límite.</td>
+                                        <td>
+                                            <button class="btn btn-warning btn-edit mt-1 mb-1" data-toggle="modal"
+                                                data-target="#announcementModal" data-id="1">
+                                                <i class="fas fa-pencil-alt" style="color: white;"></i>
+                                            </button>
+                                            <button class="btn btn-danger mt-1 mb-1">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,6 +74,8 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+
+
                     <div class="modal-body">
                         <form id="announcementForm">
                             <div class="form-group">
@@ -91,21 +94,23 @@
                             </div>
                         </form>
                     </div>
+
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-close" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-add" id="saveProfile">Guardar</button>
+                        <button type="button" class="btn btn-close" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-add" id="saveProfile">Guardar</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <footer>
-            <?php include 'footerAdmin.php'; ?>
-        </footer>
+    <footer>
+        <?php include 'footerAdmin.php'; ?>
+    </footer>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
