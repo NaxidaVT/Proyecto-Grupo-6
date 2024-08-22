@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .sidebar img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .sidebar {
+            background-color: #fff;
+            padding: 20px;
+            height: 100vh;
+            border-right: 1px solid #e3e6f0;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .nav-tabs .nav-link {
+            color: #333;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #007bff;
+        }
+
+        .card {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .calendar-container {
+            border: 1px solid #e3e6f0;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .event-list {
+            margin-top: 20px;
+        }
+
+        .event-item {
+            border: 1px solid #e3e6f0;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+
+        .modal-body input,
+        .modal-body textarea {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex">
+        <div class="sidebar col-md-3">
+            <button class="btn btn-link mb-3" onclick="goBack()">Volver</button>
+            <div class="text-center mb-4">
+                <img src="path/to/your/image.webp" class="rounded-circle mb-2" alt="User" id="userpic">
+                <h4>Nombre de Usuario aquí</h4>
+                <p>Tipo de Usuario aquí</p>
+            </div>
+            <div class="mb-3">
+                <strong>Numero de Cedula:</strong>
+                <p>Agregar...</p>
+            </div>
+            <div class="mb-3">
+                <strong>E-mail de contacto:</strong>
+                <p>Agregar...</p>
+            </div>
+            <div class="mb-3">
+                <strong>Telefono:</strong>
+                <p>Agregar...</p>
+            </div>
+            <div class="mb-3">
+                <strong>Puesto:</strong>
+                <p>Agregar...</p>
+            </div>
+        </div>
+
+        <div class="main-content col-md-9">
+            <nav class="nav nav-tabs">
+                <a class="nav-item nav-link active" data-toggle="tab" href="#Vista_General">Vista General</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#Documentos">Documentos</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#Editar_Perfil">Editar Perfil</a>
+            </nav>
+            <div class="tab-content mt-4">
+                <div class="tab-pane fade show active" id="Vista_General">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Notificaciones sin leer</h5>
+                            <p id="notificationCount">Número de notificaciones sin leer</p>
+                            <button class="btn btn-success" onclick="viewNotifications()">Ver últimas notificaciones</button>
+                        </div>
+                    </div>
+                    <div class="card mt-4 calendar-container">
+                        <h5>Calendario</h5>
+                        <input type="text" id="datepicker" class="form-control" placeholder="Selecciona una fecha">
+                    </div>
+                    <div class="event-list" id="eventList">
+                        <h5>Lista de Eventos</h5>
+                        <!-- Aquí se agregarán los eventos -->
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="Documentos">
+                    <p>Los documentos subidos se verían aquí...</p>
+                </div>
+
+                <div class="tab-pane fade" id="Editar_Perfil">
+                    <h2>Detalles del Perfil</h2>
+                    <p>Editar Perfil</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="firstName">Nombre</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Ingresa tu nombre">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="lastName">Apellidos</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Ingresa tus apellidos">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Teléfono</label>
+                            <input type="text" class="form-control" id="title" placeholder="Ingresa tu número de teléfono personal">
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary btn-block" onclick="updateProfile(event)">Actualizar</button>
+                    </form>
+                    <a href="#" class="btn btn-danger mt-3" onclick="requestAccountClosure()">Solicitud de cierre de cuenta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para agregar evento -->
+    <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="eventModalLabel">Agregar Evento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="eventTitle" placeholder="Título del Evento">
+                    <textarea id="eventDescription" placeholder="Descripción del Evento"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="addEvent()">Agregar Evento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        let selectedDate = '';
+
+        // Inicialización de Flatpickr
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr("#datepicker", {
+                dateFormat: "Y-m-d",
+                onChange: function (selectedDates, dateStr, instance) {
+                    selectedDate = dateStr;
+                    $('#eventModal').modal('show');
+                }
+            });
+        });
+
+        // Funciones para las alertas de los botones
+        function goBack() {
+            alert('Función para volver a la página anterior.');
+        }
+
+        function viewNotifications() {
+            alert('Aquí se mostrarán las últimas notificaciones.');
+        }
+
+        function updateProfile(event) {
+            event.preventDefault();
+            alert('Perfil actualizado exitosamente.');
+        }
+
+        function requestAccountClosure() {
+            alert('Se ha enviado la solicitud de cierre de cuenta.');
+        }
+
+        // Función para agregar un evento a la lista
+        function addEvent() {
+            const title = document.getElementById('eventTitle').value;
+            const description = document.getElementById('eventDescription').value;
+
+            if (title && description) {
+                const eventList = document.getElementById('eventList');
+                const eventItem = document.createElement('div');
+                eventItem.classList.add('event-item');
+                eventItem.innerHTML = `
+                    <h6>${title}</h6>
+                    <p>${description}</p>
+                    <small>Fecha: ${selectedDate}</small>
+                `;
+
+                eventList.appendChild(eventItem);
+
+                $('#eventModal').modal('hide');
+            } else {
+                alert('Por favor, completa ambos campos antes de agregar un evento.');
+            }
+        }
+    </script>
+</body>
+
+</html>
