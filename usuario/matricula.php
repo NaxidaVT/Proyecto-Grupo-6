@@ -36,9 +36,16 @@
                         <div class="row mb-4">
                             <div class="col">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto"
-                                        required placeholder="@ejemplo.com">
-                                    <label for="nombreCompleto">Nombre completo del estudiante</label>
+                                    <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" required
+                                        placeholder="nombreCompleto">
+                                    <label for="telcel">Nombre completo del estudiante</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="cedulaE" name="cedulaE" required
+                                        placeholder="Introducir cédula">
+                                    <label for="cedulaE">Cédula del estudiante</label>
                                 </div>
                             </div>
                         </div>
@@ -68,22 +75,6 @@
                                     <textarea class="form-control" id="direccion" name="direccion"
                                         placeholder="direccion" required style="height: 136px;"></textarea>
                                     <label for="direccion">Dirección de residencia</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col">
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="telcel" name="telcel" required
-                                        placeholder="8888-8888">
-                                    <label for="telcel">Teléfono/celular del encargado</label>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="correo" name="correo" required
-                                        placeholder="@ejemplo.com">
-                                    <label for="correo">Correo electrónico del encargado</label>
                                 </div>
                             </div>
                         </div>

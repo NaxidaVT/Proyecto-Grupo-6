@@ -15,11 +15,7 @@
         <?php include 'headerAdmin.php'; ?>
     </header>
     <div class="d-flex">
-        <div class="sidebar col-md-2">
-            <a href="#" class="text-center mb-4 d-block">Correo</a>
-            <a href="#" class="rounded">Bandeja de entrada <span
-                    class="badge badge-secondary float-right rounded">7</span></a>
-        </div>
+        
         <div class="email-list col-md-4">
             <div class="email-item" onclick="showEmail('email1')">
                 <strong>Escuela Primaria ABC</strong>

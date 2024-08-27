@@ -102,12 +102,16 @@
                             <input type="text" class="form-control" id="apellidos" placeholder="Ingresa tus apellidos">
                         </div>
                         <div class="form-group">
+                            <label for="cedula">Número de Cédula</label>
+                            <input type="number" class="form-control" id="cedula" placeholder="Ingresa el número de cédula">
+                        </div>
+                        <div class="form-group">
                             <label for="correo">Correo electrónico</label>
                             <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico">
                         </div>
                         <div class="form-group">
                             <label for="telefono">Teléfono</label>
-                            <input type="text" class="form-control" id="telefono" placeholder="Ingresa tu teléfono">
+                            <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu teléfono">
                         </div>
                         <div id="studentsContainer">
                         </div>

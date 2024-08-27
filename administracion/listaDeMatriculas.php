@@ -14,12 +14,8 @@
     <header>
         <?php include 'headerAdmin.php'; ?>
     </header>
-    <div class="d-flex">
-        <div class="sidebar col-md-2">
-            <a href="#" class="d-block text-center mb-4">Ministerio de Educacion</a>
-            <a href="#">Dashboard</a>
-            <a href="#">Ver Matrículas</a>
-        </div>
+    <div class="d-flex justify-content-center align-items-center">
+        
         <div class="content col-md-10">
             <div class="d-flex justify-content-between mb-3">
                 <div>
@@ -207,7 +203,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Repite este patrón para más filas -->
             </div>
         </div>
     </div>

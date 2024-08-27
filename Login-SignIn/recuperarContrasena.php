@@ -1,6 +1,4 @@
-</html>
 <!DOCTYPE html>
-<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,9 +8,11 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <header>
-        <?php include 'headerLog.php'; ?>
-    </header>
+    <?php include 'headerLog.php'; ?>
+</header>
+
 <body>
     <!----LogIn inicia----->
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
@@ -24,8 +24,8 @@
                         class="img-fluid">
                 </div>
                 <p class="text-white fs-5" style="font-family: 'Courier New', Courier, monospace; font-weight: 500;">
-    Inicia sesión para continuar
-</p>
+                    Inicia sesión para continuar
+                </p>
                 <small class="text-white text-wrap text-center"
                     style="width: 17rem;font-family: 'Courier New', Courier, monospace;">En el nuevo sistema virtual tu experiencia mejora!</small>
             </div>
@@ -37,15 +37,15 @@
                     <div class="card-body">
                         <h3 class="card-title text-center mb-4">Recuperar Contraseña</h3>
                         <form>
-                    <div class="form-group">
-                        <label for="emailOrPhone">Correo Electrónico o Teléfono</label>
-                        <input type="text" class="form-control" id="emailOrPhone" placeholder="Introduce tu correo o teléfono" required>
-                    </div>
-                    <button style="display: block; margin: 0 auto; width: calc(100% - 30px);" type="submit" class="btn btn-register">Enviar</button>
-                </form>
-                <div class="mt-3 text-center">
-                    <a style="color: #000;" href="logIn.php">Volver al inicio de sesión</a>
-                </div>
+                            <div class="form-group">
+                                <label for="emailOrPhone">Correo Electrónico o Teléfono</label>
+                                <input type="text" class="form-control" id="emailOrPhone" placeholder="Introduce tu correo o teléfono" required>
+                            </div>
+                            <button style="display: block; margin: 0 auto; width: calc(100% - 30px);" type="submit" class="btn btn-register">Enviar</button>
+                        </form>
+                        <div class="mt-3 text-center">
+                            <a style="color: #000;" href="logIn.php">Volver al inicio de sesión</a>
+                        </div>
                     </div>
                 </div>
             </div>
