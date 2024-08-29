@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -13,8 +14,38 @@
 </head>
 
 <body>
+<?php
+// Conexión a la base de datos
+$host = 'localhost';
+$dbname = 'sist_mat';
+$username = 'root';
+$password = ''; // Cambia esto por el nombre de tu base de datos
+
+$conn = new mysqli($host, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = $_POST['nombreCompletoC'];
+    $mensaje = $_POST['mensaje'];
+    $telefono = $_POST['celularC'];
+    $email = $_POST['correoC'];
+
+    $sql = "INSERT INTO notifications (nombre, mensaje, telefono, email) VALUES ('$nombre', '$mensaje', '$telefono', '$email')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Mensaje enviado con éxito";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+$conn->close();
+?>
     <header>
-        <?php include 'header-template.php'; ?>
+        <?php include 'headerAdmin.php'; ?>
     </header>
     <section id="banner-m"
         style="background-image: url('https://images.pexels.com/photos/5965914/pexels-photo-5965914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); background-size: cover; background-position: center; position: relative;margin-bottom: 50px;">

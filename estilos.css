@@ -1,0 +1,87 @@
+.login-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.left-box {
+    position: relative;
+    padding: 0;
+}
+
+.left-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.right-box {
+    padding: 40px;
+}
+
+.card-title {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #1c1c72;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #15155d;
+}
+
+#loginError {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.mt-3 a {
+    color: #1c1c72;
+    text-decoration: none;
+}
+
+.mt-3 a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .left-box {
+        display: none;
+    }
+    .right-box {
+        padding: 20px;
+    }
+}
