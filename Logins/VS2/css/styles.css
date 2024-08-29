@@ -1,0 +1,64 @@
+body {
+    background-color: #cbcbcb;
+}
+
+
+.btn-login {
+    background-color: darkslateblue !important;
+    color: white !important;
+}
+
+.btn-login:hover {
+    background-color: #7c6fd3 !important;
+    color: white !important;
+}
+
+.btn-registro {
+    background-color: blue !important;
+    color: white !important;
+}
+
+.btn-registro:hover {
+    background-color: #2091d8 !important;
+    color: white !important;
+}
+
+
+.btn-logout {
+    background-color: #ee3a3a !important;
+    color: white !important;
+}
+
+.btn-logout:hover {
+    background-color: #f4978e !important;
+}
+
+
+.btn-add {
+    background-color: green !important;
+    color: white !important;
+}
+
+.btn-add:hover {
+    background-color: #26b926 !important;
+}
+
+.btn-list {
+    background-color: orangered !important;
+    color: white !important;
+
+}
+
+.btn-list:hover {
+    background-color: #f56c3a !important;
+}
+
+
+.btn-back {
+    background-color: #8f0000 !important;
+    color:white !important;
+}
+
+.btn-back:hover {
+    background-color: red !important;
+}
