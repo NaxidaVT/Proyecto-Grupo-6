@@ -36,9 +36,7 @@
                             <div>
                                 <input type="checkbox">
                                 Matrícula ID: <a href="#" onclick="toggleDetails('details1')">#6709</a>
-                            </div>
-                            <a href="solicitudVistaCompleta.php" class="btn btn-view btn-sm">Ver detalles de solicitud</a>
-                        </div>
+
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-4">
