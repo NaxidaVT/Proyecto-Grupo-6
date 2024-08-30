@@ -39,7 +39,7 @@
                             </ul>
                         </li>
                         <li class="nav-item"><a class="btn btn-custom" href="administracion/logIn-adm.php">Iniciar sesión</a></li>
-                        <li class="nav-item"><a class="btn btn-register" href="/Proyecto-Grupo-6/login-Signin/crearUsuario.php">Registrarse</a></li>
+                        <li class="nav-item"><a class="btn btn-register" href="login-Signin/crearUsuario.php">Registrarse</a></li>
                     </ul>
                 </div>
             </div>

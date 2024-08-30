@@ -36,8 +36,10 @@
                                 <li><a class="dropdown-item" href="../guiasTutoriales.php">Guias y tutoriales</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="btn btn-custom" href="login.php">Iniciar sesión</a></li>
-                        <li class="nav-item"><a class="btn btn-register" href="crearUsuario.php">Registrarse</a></li>
+                        </li>
+                        <li class="nav-item"><a class="btn btn-custom" href="logIn-adm.php">Iniciar sesión</a></li>
+                        <li class="nav-item"><a class="btn btn-register" href="../login-Signin/crearUsuario.php">Registrarse</a></li>
+                    </ul>
                     </ul>
                 </div>
             </div>

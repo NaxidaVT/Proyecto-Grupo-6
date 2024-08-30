@@ -21,7 +21,7 @@
         <h1>Bienvenido al Sistema de Matrícula en Línea!</h1>
         <p>Matrícula abierta para el curso electivo 2025</p>
         <p>Nuestra aplicación facilita la gestión académica y la comunicación entre padres, estudiantes y administradores escolares</p>
-        <a class="btn btn-primary" href="#" style="margin-right: 10px;">Matricúlate en línea</a>
+        <a class="btn btn-primary" href="usuario/matricula.php" style="margin-right: 10px;">Matricúlate en línea</a>
         <a class="btn btn-secondary" href="#">Saber más</a>
     </div>
 
@@ -34,7 +34,8 @@
                     <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Información Importante antes de iniciar clases</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="card-text">Verifiquen sus horarios de clases y las plataformas utilizadas para las lecciones en línea.
+                        Asegúrense de tener acceso a las herramientas necesarias, como Zoom, Microsoft Teams o Google Meet.</p>
                     </div>
                 </div>
             </div>
@@ -42,8 +43,9 @@
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Colegios se preparan para inicio de clases</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h5 class="card-title">Escuelas se preparan para inicio de clases</h5>
+                        <p class="card-text">Preparen su espacio de estudio: una silla cómoda, buena iluminación y una conexión a Internet estable.
+                        Tengan a mano todos los materiales necesarios, como libros, cuadernos y bolígrafos.</p>
                     </div>
                 </div>
             </div>
@@ -51,8 +53,9 @@
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1584697964328-b1e7f63dca95?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Se valoran escuelas de verano para escuelas primarias</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h5 class="card-title">Comunicación con Profesores</h5>
+                        <p class="card-text">Manténganse en contacto con sus profesores. Si tienen dudas, no duden en preguntar.
+                        Participen activamente en las clases virtuales y aprovechen las oportunidades de aprendizaje.</p>
                     </div>
                 </div>
             </div>
@@ -60,8 +63,9 @@
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1524069290683-0457abfe42c3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Ministerio de cultura invierte en educación pública</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h5 class="card-title">Descanso y Autocuidado</h5>
+                        <p class="card-text">Recuerden tomar descansos regulares durante el día. Levántense, estiren las piernas y descansen la vista.
+                        Cuiden su bienestar físico y emocional.</p>
                     </div>
                 </div>
             </div>
@@ -73,7 +77,7 @@
         <h2>Calendario Escolar 2024-2025</h2>
         <p>¡Planifica tu año escolar con antelación!</p>
         <p>Explora las fechas clave, vacaciones, eventos importantes y más.</p>
-        <a class="btn btn-warning" href="#">Ver Calendario</a>
+        <a class="btn btn-warning" href="https://calendario.mep.go.cr/2024/app/index.html">Ver Calendario</a>
     </div>
 
     <!-- Sección de documentos importantes -->

@@ -27,7 +27,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="matricula.php">Matrícula</a></li>
                         <li class="nav-item"><a class="nav-link" href="perfil.php">Perfil</a></li>
-                        <li class="nav-item"><a class="btn btn-custom" href="/Proyecto-Grupo-6/indexF.php">Cerrar Sesión</a></li>
+                        <li class="nav-item"><a class="btn btn-custom" href="../index.php">Cerrar Sesión</a></li>
                     </ul>
                 </div>
             </div>
