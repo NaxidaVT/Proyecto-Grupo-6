@@ -45,8 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
     <header>
-        <?php include 'headerAdmin.php'; ?>
+        <?php include 'header-template.php'; ?>
     </header>
+    
     <section id="banner-m"
         style="background-image: url('https://images.pexels.com/photos/5965914/pexels-photo-5965914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); background-size: cover; background-position: center; position: relative;margin-bottom: 50px;">
 

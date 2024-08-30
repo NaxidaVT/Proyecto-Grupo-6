@@ -18,7 +18,7 @@
           <h5 class="text-uppercase">Ministerio de Educación Pública</h5>
           <ul>
             <li><a href="#">Servicios</a></li>
-            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="about.php">Sobre nosotros</a></li>
             <li><a href="#">Contáctenos</a></li>
           </ul>
         </div>

@@ -24,16 +24,16 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="/Proyecto-Grupo-6/index.php">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/Proyecto-Grupo-6/noticias.php">Noticias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.php">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../noticias.php">Noticias</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Soporte
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/Proyecto-Grupo-6/faQ.php">FaQ</a></li>
-                                <li><a class="dropdown-item" href="/Proyecto-Grupo-6/contacto.php">Contacto</a></li>
-                                <li><a class="dropdown-item" href="/Proyecto-Grupo-6/guiasTutoriales.php">Guias y tutoriales</a></li>
+                                <li><a class="dropdown-item" href="/Proyecto-Grupo-6/ContfaQTuto/faQ.php">FaQ</a></li>
+                                <li><a class="dropdown-item" href="/Proyecto-Grupo-6/ContfaQTuto/contacto.php">Contacto</a></li>
+                                <li><a class="dropdown-item" href="/Proyecto-Grupo-6/ContfaQTuto/guiasTutoriales.php">Guias y tutoriales</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="btn btn-custom" href="login.php">Iniciar sesión</a></li>
@@ -51,3 +51,4 @@
 </body>
 
 </html>
+

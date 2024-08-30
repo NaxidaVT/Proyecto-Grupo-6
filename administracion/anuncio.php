@@ -1,15 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+require_once 'db_connect.php';
 
+// Definir las variables de conexión si no están definidas
+if (!isset($host)) {
+    $host = 'localhost';
+    $dbname = 'sist_mat';
+    $username = 'root';
+    $password = '';
+}
+
+// Intentar establecer la conexión si $conn no está definida
+if (!isset($conn)) {
+    try {
+        $conn = new mysqli($host, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            throw new Exception("Error de conexión: " . $conn->connect_error);
+        }
+        $conn->set_charset("utf8");
+    } catch (Exception $e) {
+        die("Error de conexión a la base de datos: " . $e->getMessage());
+    }
+}
+
+?>
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Matrícula en Línea</title>
+    <title>Sistema de Matrícula en Línea - Anuncios</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./styleAdmin.css">
 </head>
-
 <body>
     <header>
         <?php include 'headerAdmin.php'; ?>
@@ -41,21 +64,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Nueva Fecha de Inscripción</td>
-                                        <td>2024-07-20</td>
-                                        <td>La nueva fecha de inscripción es el 20 de julio de 2024. Asegúrese de
-                                            completar su formulario antes de la fecha límite.</td>
-                                        <td>
-                                            <button class="btn btn-warning btn-edit mt-1 mb-1" data-toggle="modal"
-                                                data-target="#announcementModal" data-id="1">
-                                                <i class="fas fa-pencil-alt" style="color: white;"></i>
-                                            </button>
-                                            <button class="btn btn-danger mt-1 mb-1">
-                                                <i class="fa fa-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
+                                    <!-- Los anuncios se cargarán aquí dinámicamente -->
                                 </tbody>
                             </table>
                         </div>
@@ -75,29 +84,28 @@
                         </button>
                     </div>
 
-
                     <div class="modal-body">
                         <form id="announcementForm">
+                            <input type="hidden" id="announcement_id" name="id">
+                            <input type="hidden" id="action" name="action" value="add">
                             <div class="form-group">
                                 <label for="titulo">Título</label>
-                                <input type="text" class="form-control" id="titulo"
-                                    placeholder="Ingresa el título del anuncio">
+                                <input type="text" class="form-control" id="titulo" name="titulo" required>
                             </div>
                             <div class="form-group">
                                 <label for="fecha">Fecha</label>
-                                <input type="date" class="form-control" id="fecha">
+                                <input type="date" class="form-control" id="fecha" name="fecha" required>
                             </div>
                             <div class="form-group">
                                 <label for="descripcion">Descripción</label>
-                                <textarea class="form-control" id="descripcion" rows="3"
-                                    placeholder="Ingresa la descripción del anuncio"></textarea>
+                                <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
                             </div>
                         </form>
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-close" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-add" id="saveProfile">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="saveAnnouncement">Guardar</button>
                     </div>
                 </div>
             </div>
@@ -108,9 +116,10 @@
         <?php include 'footerAdmin.php'; ?>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="anuncio.js"></script>
 </body>
 
 </html>

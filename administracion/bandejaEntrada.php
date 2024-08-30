@@ -11,52 +11,45 @@
 </head>
 
 <body>
+
     <header>
         <?php include 'headerAdmin.php'; ?>
     </header>
-    <div class="d-flex">
-        
-        <div class="email-list col-md-4">
-            <div class="email-item" onclick="showEmail('email1')">
-                <strong>Escuela Primaria ABC</strong>
-                <p>Recordatorio: Reunión de Padres el 15 de marzo...</p>
-                <small>10:00 AM</small>
-            </div>
-            <div class="email-item" onclick="showEmail('email2')">
-                <strong>Escuela Primaria ABC</strong>
-                <p>Boletín Informativo de Febrero...</p>
-                <small>Feb 10</small>
-            </div>
-            <div class="email-item" onclick="showEmail('email3')">
-                <strong>Escuela Primaria ABC</strong>
-                <p>Actualización de la Política de Asistencia...</p>
-                <small>Jan 28</small>
-            </div>
-            <div class="email-item" onclick="showEmail('email4')">
-                <strong>Escuela Primaria ABC</strong>
-                <p>Evento de Fin de Año...</p>
-                <small>Dec 20</small>
-            </div>
-            <div class="email-item" onclick="showEmail('email5')">
-                <strong>Escuela Primaria ABC</strong>
-                <p>Invitación: Taller para Padres...</p>
-                <small>Nov 25</small>
-            </div>
-            <div class="email-item" onclick="showEmail('email6')">
-                <strong>Escuela Primaria ABC</strong>
-                <p>Recordatorio: Entrega de Boletas de Calificaciones...</p>
-                <small>Nov 15</small>
-            </div>
-            <div class="email-item" onclick="showEmail('email7')">
-                <strong>Escuela Primaria ABC</strong>
-                <p>Actualización de Contacto de Emergencia...</p>
-                <small>Nov 5</small>
-            </div>
-        </div>
-        <div class="email-detail col-md-6" id="email-detail">
-            <h3>Haz Click en un correo para ver sus contenido</h3>
-        </div>
-    </div>
+    <?php
+// Conexión a la base de datos
+$host = 'localhost';
+$dbname = 'sist_mat';
+$username = 'root';
+$password = ''; // Cambia esto por el nombre de tu base de datos
+
+$conn = new mysqli($host, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+}
+
+$sql = "SELECT notification_id, nombre, mensaje, telefono, email FROM notifications ORDER BY notification_id DESC";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<div class='container'>";
+    while ($row = $result->fetch_assoc()) {
+        echo "<div class='card mb-3'>";
+        echo "<div class='card-body'>";
+        echo "<h5 class='card-title'>" . $row["nombre"] . "</h5>";
+        echo "<h6 class='card-subtitle mb-2 text-muted'>" . $row["email"] . " | " . $row["telefono"] . "</h6>";
+        echo "<p class='card-text'>" . $row["mensaje"] . "</p>";
+        echo "</div>";
+        echo "</div>";
+    }
+    echo "</div>";
+} else {
+    echo "No hay notificaciones";
+}
+
+$conn->close();
+?>
+
     <script>
         function showEmail(emailId) {
             const emails = {

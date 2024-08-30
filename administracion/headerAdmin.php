@@ -25,12 +25,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="perfil-adm.php">Perfil</a></li>
                         <li class="nav-item"><a class="nav-link" href="adminPerfil.php">Perfiles</a></li>
-                        <li class="nav-item"><a class="nav-link" href="adminUsuario.php">Usuarios</a></li>
                         <li class="nav-item"><a class="nav-link" href="anuncio.php">Anuncio</a></li>
                         <li class="nav-item"><a class="nav-link" href="bandejaEntrada.php">Bandeja de entrada</a></li>
                         <li class="nav-item"><a class="nav-link" href="listaDeMatriculas.php">Matriculas</a></li>
-                        <li class="nav-item"><a class="btn btn-custom" href="http://localhost:84/Proyecto-Grupo-6/indexF.php">Cerrar Sesión</a></li>
+                        <li class="nav-item"><a class="btn btn-custom" href="logout.php">Cerrar Sesión</a></li>
                     </ul>
                 </div>
             </div>

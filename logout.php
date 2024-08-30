@@ -1,6 +1,6 @@
 <?php
-session_start();
-session_destroy();
-header("Location: logIn-adm.php");
-exit();
+require 'controllers/AuthController.php';
+
+$controller = new AuthController();
+$controller->logout();
 ?>

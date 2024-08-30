@@ -41,10 +41,6 @@
                         <input type="text" class="form-control" id="name" placeholder="Introduce tu nombre" required>
                     </div>
                     <div class="form-group">
-                            <label for="apellidos">Apellidos</label>
-                            <input type="text" class="form-control" id="apellidos" placeholder="Ingresa tus apellidos">
-                        </div>
-                    <div class="form-group">
                         <label for="email">Correo Electrónico</label>
                         <input type="email" class="form-control" id="email" placeholder="Introduce tu correo" required>
                     </div>
@@ -54,7 +50,7 @@
                     </div>
                     <div class="form-group">
                         <label for="cedula">Cédula</label>
-                        <input type="number" class="form-control" id="cedula" placeholder="Introduce tu cédula" required>
+                        <input type="text" class="form-control" id="cedula" placeholder="Introduce tu cédula" required>
                     </div>
                     <div class="form-group">
                         <label for="password">Contraseña</label>

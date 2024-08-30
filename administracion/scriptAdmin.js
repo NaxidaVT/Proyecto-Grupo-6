@@ -1,70 +1,100 @@
 $(document).ready(function() {
-    let studentIndex = 0;
+    // Función para cargar los datos del perfil en el modal
+    function loadProfileData(profileId) {
+        $.ajax({
+            url: 'adminPerfil.php',
+            method: 'GET',
+            data: { id: profileId },
+            dataType: 'json',
+            success: function(response) {
+                $('#profile_id').val(profileId);
+                $('#nombre').val(response.nombre);
+                $('#apellidos').val(response.apellidos);
+                $('#cedula').val(response.cedula);
+                $('#correo').val(response.correo);
+                $('#telefono').val(response.telefono);
+                $('#action').val('edit');
+                $('#profileModal').modal('show');
+            },
+            error: function(xhr, status, error) {
+                alert('Error al cargar los datos del perfil: ' + error);
+            }
+        });
+    }
 
-    // Función para agregar campos de estudiante
-    $('#addStudent').click(function() {
-        studentIndex++;
-        $('#studentsContainer').append(`
-            <div class="student-entry mb-2" id="student-${studentIndex}">
-                <h5 class="mt-2">Estudiante ${studentIndex}</h5>
-                <div class="form-group">
-                    <label for="cedula-${studentIndex}">Cédula del Estudiante</label>
-                    <input type="text" class="form-control" id="cedula-${studentIndex}" placeholder="Ingresa la cédula">
-                </div>
-                <div class="form-group">
-                    <label for="nombre-${studentIndex}">Nombre del Estudiante</label>
-                    <input type="text" class="form-control" id="nombre-${studentIndex}" placeholder="Ingresa el nombre">
-                </div>
-                <div class="form-group">
-                    <label for="apellidos-${studentIndex}">Apellidos del Estudiante</label>
-                    <input type="text" class="form-control" id="apellidos-${studentIndex}" placeholder="Ingresa los apellidos">
-                </div>
-                <div class="form-group">
-                    <label for="parentesco-${studentIndex}">Parentesco</label>
-                    <input type="text" class="form-control" id="parentesco-${studentIndex}" placeholder="Ingresa el parentesco">
-                </div>
-                <button type="button" class="btn btn-danger remove-student" data-id="${studentIndex}">Eliminar Estudiante</button>
-            </div>
-        `);
+    // Manejar clic en el botón de editar
+    $(document).on('click', '.edit-profile', function() {
+        var profileId = $(this).data('id');
+        loadProfileData(profileId);
     });
 
-    // Función para eliminar campos de estudiante
-    $(document).on('click', '.remove-student', function() {
-        let id = $(this).data('id');
-        $(`#student-${id}`).remove();
+    // Manejar clic en el botón de eliminar
+    $(document).on('click', '.delete-profile', function() {
+        var profileId = $(this).data('id');
+        if (confirm('¿Estás seguro de que quieres eliminar este perfil?')) {
+            $.ajax({
+                url: 'adminPerfil.php',
+                method: 'POST',
+                data: { action: 'delete', profile_id: profileId },
+                dataType: 'json',
+                success: function(response) {
+                    if (response.status === 'success') {
+                        alert('Perfil eliminado con éxito');
+                        location.reload();
+                    } else {
+                        alert('Error al eliminar el perfil: ' + response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    alert('Error al eliminar el perfil: ' + error);
+                }
+            });
+        }
     });
 
-    // Simulación de carga de perfil para edición
-    $('.btn-edit').click(function() {
-        let profileId = $(this).data('id');
-        // Aquí deberías cargar datos reales desde el servidor según el profileId
-        // Por ejemplo, rellenar campos con valores ficticios para demostrar
-        $('#nombre').val('Juan Solis');
-        $('#apellidos').val('Solis');
-        $('#correo').val('juan@gmail.com');
-        $('#telefono').val('123-1234');
-        $('#studentsContainer').html(`
-            <div class="student-entry mb-2" id="student-1">
-                <h5 class="mt-2">Estudiante 1</h5>
-                <div class="form-group">
-                    <label for="cedula-1">Cédula del Estudiante</label>
-                    <input type="text" class="form-control" id="cedula-1" value="123456789" placeholder="Ingresa la cédula">
-                </div>
-                <div class="form-group">
-                    <label for="nombre-1">Nombre del Estudiante</label>
-                    <input type="text" class="form-control" id="nombre-1" value="María" placeholder="Ingresa el nombre">
-                </div>
-                <div class="form-group">
-                    <label for="apellidos-1">Apellidos del Estudiante</label>
-                    <input type="text" class="form-control" id="apellidos-1" value="González" placeholder="Ingresa los apellidos">
-                </div>
-                <div class="form-group">
-                    <label for="parentesco-1">Parentesco</label>
-                    <input type="text" class="form-control" id="parentesco-1" value="Hijo" placeholder="Ingresa el parentesco">
-                </div>
-                <button type="button" class="btn btn-danger remove-student" data-id="1">Eliminar Estudiante</button>
-            </div>
-        `);
+    // Manejar clic en el botón de guardar perfil
+    $('#saveProfile').click(function() {
+        var formData = $('#profileForm').serialize();
+        $.ajax({
+            url: 'adminPerfil.php',
+            method: 'POST',
+            data: formData,
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    alert('Perfil guardado con éxito');
+                    $('#profileModal').modal('hide');
+                    if (response.newProfileId) {
+                        var newRow = `<tr>
+                            <td>${$('#nombre').val()} ${$('#apellidos').val()}</td>
+                            <td>${$('#cedula').val()}</td>
+                            <td>${$('#correo').val()}</td>
+                            <td>${$('#telefono').val()}</td>
+                            <td>
+                                <button class='btn btn-sm btn-primary edit-profile' data-id='${response.newProfileId}'>Editar</button>
+                                <button class='btn btn-sm btn-danger delete-profile' data-id='${response.newProfileId}'>Eliminar</button>
+                            </td>
+                        </tr>`;
+                        $('#profilesTable tbody').append(newRow);
+                    } else {
+                        location.reload();
+                    }
+                } else {
+                    alert('Error al guardar el perfil: ' + response.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                console.log(xhr.responseText);
+                alert('Error al guardar el perfil: ' + error);
+            }
+        });
     });
 
+    // Manejar clic en el botón de agregar perfil
+    $('.btn-add').click(function() {
+        $('#profileForm')[0].reset();
+        $('#profile_id').val('');
+        $('#action').val('add');
+        $('#profileModal').modal('show');
+    });
 });

@@ -74,17 +74,22 @@
                         </div>
                     </div>
                     <div style="margin-bottom: 24px;">
-        <input class="form-check-input" type="checkbox" name="permisoEmergencia" id="permisoEmergencia" />
-        <label for="permisoEmergencia">Permiso para tratar al estudiante en caso de emergencia médica</label>
-    </div>
-    <div style="margin-bottom: 24px;">
-        <input class="form-check-input" type="checkbox" name="permisoFoto" id="permisoFoto" />
-        <label for="permisoFoto">Consentimiento para tomar y usar fotografías del estudiante para actividades escolares</label>
-    </div>
-    <div style="margin-bottom: 24px;">
-        <input class="form-check-input" type="checkbox" name="permisoExcursiones" id="permisoExcursiones" />
-        <label for="permisoExcursiones">Autorización para que el estudiante participe en excursiones escolares y otras actividades fuera de la escuela</label>
-    </div>
+                        <input class="form-check-input" type="checkbox" name="permisoEmergencia"
+                            id="permisoEmergencia" />
+                        <label for="permisoEmergencia">Permiso para tratar al estudiante en caso de emergencia
+                            médica</label>
+                    </div>
+                    <div style="margin-bottom: 24px;">
+                        <input class="form-check-input" type="checkbox" name="permisoFoto" id="permisoFoto" />
+                        <label for="permisoFoto">Consentimiento para tomar y usar fotografías del estudiante para
+                            actividades escolares</label>
+                    </div>
+                    <div style="margin-bottom: 24px;">
+                        <input class="form-check-input" type="checkbox" name="permisoExcursiones"
+                            id="permisoExcursiones" />
+                        <label for="permisoExcursiones">Autorización para que el estudiante participe en excursiones
+                            escolares y otras actividades fuera de la escuela</label>
+                    </div>
                     <div class="d-flex justify-content-end">
                         <button class="btn btn-register" type="submit" >Enviar</button>
                     </div>

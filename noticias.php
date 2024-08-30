@@ -1,3 +1,35 @@
+<?php
+require_once './administracion/db_connect.php';
+
+// Función para obtener noticias de la base de datos
+function obtenerNoticias($conn) {
+    $sql = "SELECT title, date, description FROM announcements ORDER BY date DESC LIMIT 5";
+    $result = $conn->query($sql);
+    $noticias = [];
+
+    if ($result === false) {
+        die("Error en la consulta: " . $conn->error);
+    }
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $noticias[] = [
+                "titulo" => $row["title"],
+                "fecha" => $row["date"],
+                "contenido" => $row["description"]
+            ];
+        }
+    }
+
+    $result->free();  // Liberar memoria asociada con el resultado
+    return $noticias;
+}
+
+// Obtener noticias para mostrar
+$noticias = obtenerNoticias($conn);
+$conn->close();  // Cerrar la conexión después de obtener las noticias
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -64,31 +96,16 @@
                         <div class="card">
                             <div class="card-body">
                                 <?php
-                                // Datos de ejemplo para las noticias escolares
-                                $noticias = [
-                                    [
-                                        "titulo" => "Nueva Fecha de Inscripción",
-                                        "fecha" => "2024-07-20",
-                                        "contenido" => "La nueva fecha de inscripción es el 20 de julio de 2024. Asegúrese de completar su formulario antes de la fecha límite."
-                                    ],
-                                    [
-                                        "titulo" => "Actualización de Protocolos COVID-19",
-                                        "fecha" => "2024-07-15",
-                                        "contenido" => "Se han actualizado los protocolos de COVID-19. Por favor, revise los nuevos lineamientos en el sitio web."
-                                    ],
-                                    [
-                                        "titulo" => "Feria de Ciencias 2024",
-                                        "fecha" => "2024-07-10",
-                                        "contenido" => "La Feria de Ciencias se llevará a cabo el 10 de julio de 2024. Todos los estudiantes están invitados a participar."
-                                    ],
-                                ];
-
-                                foreach ($noticias as $articulo) {
-                                    echo '<div class="news-article">';
-                                    echo '<h4>' . htmlspecialchars($articulo["titulo"]) . '</h4>';
-                                    echo '<p class="text-muted"><small>' . htmlspecialchars($articulo["fecha"]) . '</small></p>';
-                                    echo '<p>' . htmlspecialchars($articulo["contenido"]) . '</p>';
-                                    echo '</div>';
+                                if (empty($noticias)) {
+                                    echo '<p>No hay noticias disponibles en este momento.</p>';
+                                } else {
+                                    foreach ($noticias as $articulo) {
+                                        echo '<div class="news-article">';
+                                        echo '<h4>' . htmlspecialchars($articulo["titulo"]) . '</h4>';
+                                        echo '<p class="text-muted"><small>' . htmlspecialchars($articulo["fecha"]) . '</small></p>';
+                                        echo '<p>' . htmlspecialchars($articulo["contenido"]) . '</p>';
+                                        echo '</div>';
+                                    }
                                 }
                                 ?>
                             </div>

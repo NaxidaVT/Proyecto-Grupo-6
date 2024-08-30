@@ -1,4 +1,4 @@
-<?php include 'components/index_navbar.php'; ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

@@ -33,12 +33,12 @@
                                 Soporte
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/Proyecto-Grupo-6/faQ.php">FaQ</a></li>
-                                <li><a class="dropdown-item" href="/Proyecto-Grupo-6/contacto.php">Contacto</a></li>
-                                <li><a class="dropdown-item" href="/Proyecto-Grupo-6/guiasTutoriales.php">Guias y tutoriales</a></li>
+                                <li><a class="dropdown-item" href="faQ.php">FaQ</a></li>
+                                <li><a class="dropdown-item" href="contacto.php">Contacto</a></li>
+                                <li><a class="dropdown-item" href="guiasTutoriales.php">Guias y tutoriales</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="btn btn-custom" href="/Proyecto-Grupo-6/login-Signin/login.php">Iniciar sesión</a></li>
+                        <li class="nav-item"><a class="btn btn-custom" href="administracion/logIn-adm.php">Iniciar sesión</a></li>
                         <li class="nav-item"><a class="btn btn-register" href="/Proyecto-Grupo-6/login-Signin/crearUsuario.php">Registrarse</a></li>
                     </ul>
                 </div>
